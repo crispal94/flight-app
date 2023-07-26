@@ -13,9 +13,13 @@ import { RouterView } from "vue-router";
             v-for="(item, i) in items"
             :key="i"
             :value="item"
-            :title="item.title"
             :to="item.route"
           >
+            <template v-slot:prepend>
+              <v-icon :icon="item.icon"></v-icon>
+            </template>
+
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-card>
@@ -37,10 +41,12 @@ export default {
       {
         title: "Flight Search",
         route: "/flight-search",
+        icon: "mdi-magnify",
       },
       {
         title: "Flight Tickets",
         route: "/flight-tickets",
+        icon: "mdi-airplane",
       },
     ],
   }),
