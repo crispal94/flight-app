@@ -4,11 +4,11 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
   {
     path: "/",
-    component: () => import("@/views/FlightSearchVue.vue"),
+    component: () => import("@/views/FlightSearchView.vue"),
   },
   {
     path: "/flight-search",
-    component: () => import("@/views/FlightSearchVue.vue"),
+    component: () => import("@/views/FlightSearchView.vue"),
   },
   {
     path: "/flight-tickets",
