@@ -33,13 +33,19 @@
           </v-img>
 
           <v-card-subtitle class="pt-3"
-            >Flight duration: {{ flight.duration }}</v-card-subtitle
+            ><span class="font-weight-bold">Flight duration:</span>
+            {{ flight.duration }}</v-card-subtitle
           >
 
           <v-card-text>
-            <div>Price: ${{ flight.price }}</div>
+            <div>
+              <span class="font-weight-bold">Price:</span> ${{ flight.price }}
+            </div>
 
-            <div>Scales: {{ flight.stops }}</div>
+            <div>
+              <span class="font-weight-bold">Scales:</span>
+              {{ flight.stops }}
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
