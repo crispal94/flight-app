@@ -12,7 +12,7 @@ const routes = [
   },
   {
     path: "/flight-tickets",
-    component: () => import("@/views/FlightTicketsVue.vue"),
+    component: () => import("@/views/FlightTicketsView.vue"),
   },
 ];
 
