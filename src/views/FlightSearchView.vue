@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import FlightSearch from "@/components/FlightSearch.vue";
+import FlightSearch from '@/components/FlightSearch.vue'
 </script>

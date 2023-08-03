@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import FlightTickets from "@/components/FlightTickets.vue";
+import FlightTickets from '@/components/FlightTickets.vue'
 </script>

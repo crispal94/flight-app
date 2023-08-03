@@ -1,5 +1,5 @@
 <script setup>
-import { RouterView } from "vue-router";
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
@@ -9,13 +9,8 @@ import { RouterView } from "vue-router";
     <v-navigation-drawer>
       <v-card class="mx-auto" max-width="300">
         <v-list density="compact">
-          <v-list-item
-            v-for="(item, i) in items"
-            :key="i"
-            :value="item"
-            :to="item.route"
-          >
-            <template v-slot:prepend>
+          <v-list-item v-for="(item, i) in items" :key="i" :value="item" :to="item.route">
+            <template #prepend>
               <v-icon :icon="item.icon"></v-icon>
             </template>
 
@@ -25,10 +20,7 @@ import { RouterView } from "vue-router";
       </v-card>
     </v-navigation-drawer>
 
-    <v-main
-      class="d-flex align-center justify-center"
-      style="min-height: 300px"
-    >
+    <v-main class="d-flex align-center justify-center" style="min-height: 300px">
       <RouterView />
     </v-main>
   </v-layout>
@@ -39,16 +31,16 @@ export default {
   data: () => ({
     items: [
       {
-        title: "Flight Search",
-        route: "/flight-search",
-        icon: "mdi-magnify",
+        title: 'Flight Search',
+        route: '/flight-search',
+        icon: 'mdi-magnify',
       },
       {
-        title: "Flight Tickets",
-        route: "/flight-tickets",
-        icon: "mdi-airplane",
+        title: 'Flight Tickets',
+        route: '/flight-tickets',
+        icon: 'mdi-airplane',
       },
     ],
   }),
-};
+}
 </script>

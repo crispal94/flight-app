@@ -16,14 +16,7 @@
           ></v-text-field>
         </v-card-text>
       </v-col>
-      <v-col
-        v-for="flight in flights"
-        :key="flight.id"
-        cols="12"
-        sm="6"
-        md="4"
-        lg="3"
-      >
+      <v-col v-for="flight in flights" :key="flight.id" cols="12" sm="6" md="4" lg="3">
         <v-card flat class="border">
           <v-img
             class="align-end text-white"
@@ -38,9 +31,7 @@
           >
 
           <v-card-text>
-            <div>
-              <span class="font-weight-bold">Price:</span> ${{ flight.price }}
-            </div>
+            <div><span class="font-weight-bold">Price:</span> ${{ flight.price }}</div>
 
             <div>
               <span class="font-weight-bold">Scales:</span>
@@ -54,15 +45,15 @@
 </template>
 
 <script>
-import { useFlightStore } from "../store/flightStore";
+import { useFlightStore } from '../store/flightStore'
 
 export default {
   setup() {
-    const flightStore = useFlightStore();
+    const flightStore = useFlightStore()
 
     return {
       flights: flightStore.flights,
-    };
+    }
   },
   data: () => ({
     loaded: false,
@@ -71,13 +62,13 @@ export default {
 
   methods: {
     onClick() {
-      this.loading = true;
+      this.loading = true
 
       setTimeout(() => {
-        this.loading = false;
-        this.loaded = true;
-      }, 2000);
+        this.loading = false
+        this.loaded = true
+      }, 2000)
     },
   },
-};
+}
 </script>
